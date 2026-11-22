@@ -34,8 +34,8 @@ function Logos({ hidden = false }: { hidden?: boolean }) {
 export default function Partners() {
   return (
     <section className="relative overflow-hidden bg-navy-deep py-12 text-white md:py-16">
-      <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue/30 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 glow text-blue/30" />
+      <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 glow text-gold/10" />
       <div className="mx-auto mb-8 max-w-2xl px-4 text-center md:mb-12">
         <p className="text-base font-semibold tracking-widest text-gold">PARTNERSHIPS</p>
         <h2 className="mt-3 text-3xl font-bold md:text-5xl">Our University Partners</h2>
@@ -45,13 +45,15 @@ export default function Partners() {
         </p>
       </div>
 
-      <div className="partners-marquee overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+      <div className="partners-marquee relative overflow-hidden">
         <div className="partners-track flex w-max">
           <Logos />
           <Logos hidden />
           <Logos hidden />
           <Logos hidden />
         </div>
+        <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-[8%] bg-gradient-to-r from-navy-deep to-transparent" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-[8%] bg-gradient-to-l from-navy-deep to-transparent" />
       </div>
     </section>
   );

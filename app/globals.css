@@ -108,3 +108,8 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .badge-title, .badge-title-shine { animation: none; }
 }
+
+/* Soft decorative glow: a radial gradient is far cheaper to paint than a large CSS blur() filter */
+.glow {
+  background: radial-gradient(closest-side, currentColor 0%, currentColor 35%, transparent 100%);
+}

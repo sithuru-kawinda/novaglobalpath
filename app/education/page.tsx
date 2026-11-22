@@ -110,12 +110,12 @@ export default function Education() {
     <>
       {/* Hero */}
       <section className="relative isolate overflow-hidden bg-navy-deep text-white">
-        <Image src="/education/hero.png" alt="" fill priority sizes="100vw" className="-z-20 object-cover object-[50%_30%]" />
+        <Image src="/education/hero.webp" alt="" fill loading="eager" fetchPriority="high" quality={75} sizes="100vw" className="-z-20 object-cover object-[50%_30%]" />
         <div className="absolute inset-0 -z-10 bg-navy-deep/75 md:hidden" />
         <div className="absolute inset-0 -z-10 hidden bg-gradient-to-r from-navy-deep via-navy-deep/75 to-navy-deep/10 md:block" />
         <PartnerBadge />
         <div className="mx-auto max-w-7xl animate-[hero-rise_0.5s_ease-out_both] px-4 pb-16 pt-11 md:pb-20 md:pt-12">
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur-md">
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium md:backdrop-blur-md">
             <span className="h-2 w-2 rounded-full bg-gold" />
             Education &amp; Admissions
           </p>
@@ -135,7 +135,7 @@ export default function Education() {
             </Link>
             <a
               href="#process"
-              className="rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-center font-semibold backdrop-blur-md transition hover:bg-white/20"
+              className="rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-center font-semibold md:backdrop-blur-md transition hover:bg-white/20"
             >
               See How It Works
             </a>
@@ -171,7 +171,7 @@ export default function Education() {
                 <div className="relative h-full border-2 border-navy/20 p-2">
                   <div className="relative h-full overflow-hidden">
                     <Image
-                      src="/education/students-2.png"
+                      src="/education/students-2.webp"
                       alt="A student and an adviser reviewing a textbook together in a library"
                       fill
                       sizes="(min-width: 1024px) 25vw, 50vw"
@@ -184,7 +184,7 @@ export default function Education() {
                 <div className="relative mt-10 h-[calc(100%-2.5rem)] border-2 border-gold p-2">
                   <div className="relative h-full overflow-hidden">
                     <Image
-                      src="/education/students-3.jpg"
+                      src="/education/students-3.webp"
                       alt="Two students studying together at a laptop in a library"
                       fill
                       sizes="(min-width: 1024px) 25vw, 50vw"
@@ -204,7 +204,7 @@ export default function Education() {
               ["Career opportunities", "Post-study options in Europe's largest economy."],
             ].map(([t, d], i) => (
               <li key={t} className="group flex flex-1 items-center gap-4 py-5 md:gap-6 md:py-7">
-                <span className="w-12 shrink-0 text-4xl font-black leading-none text-navy/15 md:w-14 md:text-5xl transition-colors duration-300 group-hover:text-gold">
+                <span aria-hidden="true" className="w-12 shrink-0 text-4xl font-black leading-none text-navy/15 md:w-14 md:text-5xl transition-colors duration-300 group-hover:text-gold">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
@@ -268,8 +268,8 @@ export default function Education() {
 
       {/* Process */}
       <section id="process" className="relative scroll-mt-20 overflow-hidden bg-navy-deep text-white">
-        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue/30 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 glow text-blue/30" />
+        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 glow text-gold/10" />
         <div className="relative mx-auto max-w-7xl px-4 py-12 md:py-16">
           <div className="mx-auto mb-8 max-w-2xl text-center md:mb-12">
             <p className="text-base font-semibold tracking-widest text-gold">OUR PROCESS</p>
@@ -299,7 +299,7 @@ export default function Education() {
                     {i + 1}
                   </span>
                   <Reveal delay={(i % 3) * 100}>
-                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-gold/60 hover:bg-white/10 sm:p-6">
+                    <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 transition duration-300 hover:-translate-y-1 hover:border-gold/60 hover:bg-white/10 sm:p-6">
                       <span
                         aria-hidden="true"
                         className={`pointer-events-none absolute -top-4 select-none text-8xl font-black leading-none text-white/5 ${
@@ -352,7 +352,7 @@ export default function Education() {
 
           <Reveal delay={150}>
             <div className="relative h-full overflow-hidden rounded-3xl bg-navy-deep p-5 text-white shadow-sm sm:p-8">
-              <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-blue/30 blur-3xl" />
+              <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 glow text-blue/30" />
               <div className="relative">
                 <p className="text-sm font-semibold tracking-widest text-gold">INTAKES</p>
                 <h2 className="mt-2 text-2xl font-bold md:text-3xl">Two Main Start Dates a Year</h2>
@@ -392,7 +392,7 @@ export default function Education() {
               <div className="mt-4 h-1 w-16 rounded bg-gold" />
               <p className="mt-4 text-base text-slate-600 md:mt-5 md:text-lg">Quick answers to what students and parents ask us most.</p>
               <div className="relative mt-6 overflow-hidden rounded-2xl bg-navy-deep p-5 text-white md:mt-8 md:p-6">
-                <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gold/20 blur-2xl" />
+                <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 glow text-gold/20" />
                 <p className="relative text-lg font-semibold text-gold">Still have a question?</p>
                 <p className="relative mt-1 text-sm text-white/75">Talk to our team and get a clear answer for your situation.</p>
                 <Link

@@ -30,7 +30,7 @@ export default function Overseas() {
         title="Employment Opportunities"
         accent="in Germany"
         text="We present opportunities for qualified and skilled candidates, and support both candidates and employers throughout the process."
-        image="/hero/overseas.png"
+        image="/hero/overseas.webp"
       />
 
       {/* Highlights strip */}
@@ -67,7 +67,7 @@ export default function Overseas() {
             {support.map((s, i) => (
               <Reveal key={s.title} delay={i * 100}>
                 <li className="group flex items-center gap-4 py-5 md:gap-6 md:py-7">
-                  <span className="w-12 shrink-0 text-4xl font-black md:w-16 md:text-5xl leading-none text-navy/15 transition-colors duration-300 group-hover:text-gold">
+                  <span aria-hidden="true" className="w-12 shrink-0 text-4xl font-black md:w-16 md:text-5xl leading-none text-navy/15 transition-colors duration-300 group-hover:text-gold">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <div>
@@ -83,8 +83,8 @@ export default function Overseas() {
 
       {/* Sectors and requirements */}
       <section className="relative overflow-hidden bg-navy-deep text-white">
-        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue/30 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 glow text-blue/30" />
+        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 glow text-gold/10" />
         <div className="relative mx-auto max-w-4xl px-4 py-12 text-center md:py-16">
           <p className="text-base font-semibold tracking-widest text-gold">SECTORS AND REQUIREMENTS</p>
           <h2 className="mt-3 text-3xl font-bold md:text-5xl">Opportunities Coming Soon</h2>

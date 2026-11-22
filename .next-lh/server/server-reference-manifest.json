@@ -1,0 +1,62 @@
+{
+  "node": {
+    "8004d3b864ff2ba59f2a62b57d038f351852daf3d0": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": 6991,
+          "async": false
+        },
+        "app/about/page": {
+          "moduleId": 37990,
+          "async": false
+        },
+        "app/ausbildung-germany/page": {
+          "moduleId": 51220,
+          "async": false
+        },
+        "app/contact/page": {
+          "moduleId": 57064,
+          "async": false
+        },
+        "app/education/page": {
+          "moduleId": 31966,
+          "async": false
+        },
+        "app/overseas-recruitment/page": {
+          "moduleId": 82431,
+          "async": false
+        },
+        "app/page": {
+          "moduleId": 75086,
+          "async": false
+        },
+        "app/shipping-recruitment/page": {
+          "moduleId": 2871,
+          "async": false
+        },
+        "app/training/page": {
+          "moduleId": 12458,
+          "async": false
+        },
+        "app/visa-services/page": {
+          "moduleId": 21026,
+          "async": false
+        }
+      },
+      "filename": "lib/news.ts",
+      "exportedName": "$$RSC_SERVER_CACHE_0"
+    },
+    "60d6b67d7839c439966a05e33b0a646ef813146fb1": {
+      "workers": {
+        "app/contact/page": {
+          "moduleId": 57064,
+          "async": false
+        }
+      },
+      "filename": "app/contact/actions.ts",
+      "exportedName": "sendEnquiry"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "vOIOTz3QqBf0ME1lQKvoRCdI15hCao84c1Nl22+Yonc="
+}

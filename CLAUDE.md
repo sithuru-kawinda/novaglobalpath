@@ -27,10 +27,15 @@ Marketing site for Novaglobalpath (education, shipping/overseas recruitment, Aus
 - **Shared UI primitives** in `components/ui.tsx` (`PageHero`, `Section`, `BulletList`, `Card`, `ButtonLink`, `CtaBand`) — service pages are composed from these.
 - **Root layout** (`app/layout.tsx`) renders `Header`, `NewsTicker`, `Footer`, `WhatsAppButton` around every page. It uses Inter via `next/font/google` and the global `LayoutProps<"/">` type helper. `NewsTicker` is an async server component wrapped in `<Suspense>` and passed into `Header` as a prop.
 - **Live news ticker** (`lib/news.ts`): fetches DW / The Local RSS feeds, filters by topic regex and age, dedupes, and caches via `"use cache"` + `cacheLife` (shorter retry window when empty). This is the pattern for uncached/external data under `cacheComponents`.
-- **Contact form**: `app/contact/EnquiryForm.tsx` (client) calls the `sendEnquiry` server action in `app/contact/actions.ts` (`useActionState`-style `{ok, message}` state). It only validates and `console.log`s — email delivery is an unimplemented TODO.
+- **Contact form**: `app/contact/EnquiryForm.tsx` (client) calls the `sendEnquiry` server action in `app/contact/actions.ts` (`useActionState`-style `{ok, message}` state). The action validates, then emails via Nodemailer (Gmail SMTP). It needs `GMAIL_USER`, `GMAIL_APP_PASSWORD` (a Gmail App Password) and optionally `ENQUIRY_TO` in `.env.local`; if they're missing it returns a friendly error and logs the real reason server-side.
+- **Header nav**: adding a page also requires adding it to the `items` list in `components/Header.tsx` (it has a Recruitment dropdown and mobile menu), not just `nav`/`services` in `lib/site.ts`.
+- **Hero images**: pass `image="/hero/<file>"` to `PageHero`; assets live in `public/hero` and `public/partners`. Images are being migrated from PNG/JPG to `.webp` (old files are deleted in the working tree), so reference `.webp` paths.
+- **Mobile/responsive work**: use the `mobile-friendly` skill in `.claude/skills/` (no horizontal scroll, 44px tap targets, 16px form text). Sprint plans are in `.claude/spring/`.
 - **Styling**: `app/globals.css` has `@import "tailwindcss"` and an `@theme inline` block mapping brand CSS variables (`navy`, `navy-deep`, `blue`, `red`, `gold`) to Tailwind colors (`bg-navy`, `text-gold`, ...). Custom keyframes (hero, ticker) are also there.
 
 Non-default settings in `next.config.ts` that affect how code must be written:
 - `cacheComponents: true` — Cache Components model; dynamic/uncached data access in routes has specific rules, so check the docs in `node_modules/next/dist/docs/01-app/` (caching, `use cache`) before adding data fetching.
 - `partialPrefetching: true` and `experimental.agentFeedback: true`.
+- `distDir` is `process.env.NEXT_DIST || ".next"` — the `.next-A/` and `.next-B/` dirs are alternate build outputs (e.g. `NEXT_DIST=.next-A npm run dev`) so two servers/builds can run without clobbering each other. They're untracked; don't commit them.
+- `experimental.inlineCss: true`; `images` allows avif/webp with a restricted `qualities` list (`[60, 75]`) and fixed `deviceSizes`/`imageSizes`, so `next/image` `quality` values must be 60 or 75.
 - Tailwind is wired through Turbopack: a `rules` entry runs `*.css` through `@tailwindcss/turbopack`. There is no `postcss.config`.

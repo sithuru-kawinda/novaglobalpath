@@ -44,12 +44,12 @@ const quickLinks = nav.filter((n) => !serviceHrefs.has(n.href));
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden border-t-4 border-gold bg-navy-deep text-white/75">
-      <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue/20 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 glow text-blue/20" />
       {/* Main columns */}
       <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:grid-cols-2 md:py-16 lg:grid-cols-[1.4fr_1fr_1.2fr_1.2fr]">
         <div>
           <Image
-            src="/logo.png"
+            src="/logo.webp"
             alt={site.name}
             width={200}
             height={100}

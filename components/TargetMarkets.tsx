@@ -7,7 +7,7 @@ const markets = [
     code: "DE",
     text: "Education, Ausbildung, overseas recruitment and visa assistance.",
     chips: [["Education", "Ausbildung"], ["Recruitment", "Visa"]],
-    image: "/market-de.png",
+    image: "/market-de.webp",
     bg: "from-navy-deep via-navy to-blue",
   },
   {
@@ -16,7 +16,7 @@ const markets = [
     code: "LK",
     text: "Source of students, trainees and skilled professionals; local consultation and support.",
     chips: [["Students", "Trainees", "Skilled professionals"]],
-    image: "/market-lk.png",
+    image: "/market-lk.webp",
     bg: "from-[#5a0d26] via-[#8d153a] to-[#c9941a]",
   },
   {
@@ -25,7 +25,7 @@ const markets = [
     code: "SEA",
     text: "Cargo and cruise ship recruitment and crewing partnerships.",
     chips: [["Cargo", "Cruise", "Crewing partners"]],
-    image: "/market-sea.jpg",
+    image: "/market-sea.webp",
     bg: "from-navy-deep via-navy to-blue",
   },
 ];
@@ -75,7 +75,7 @@ export default function TargetMarkets() {
                       {row.map((c) => (
                         <span
                           key={c}
-                          className="whitespace-nowrap rounded-full border border-white/30 bg-white/10 px-2.5 py-1 text-xs backdrop-blur transition-colors duration-300 group-hover:border-gold/60 group-hover:bg-gold/20 xl:px-3 xl:text-sm"
+                          className="whitespace-nowrap rounded-full border border-white/30 bg-white/10 px-2.5 py-1 text-xs md:backdrop-blur transition-colors duration-300 group-hover:border-gold/60 group-hover:bg-gold/20 xl:px-3 xl:text-sm"
                         >
                           {c}
                         </span>

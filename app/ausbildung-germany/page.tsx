@@ -45,7 +45,7 @@ export default function Ausbildung() {
         title="Start Your Professional Career Through"
         accent="Ausbildung in Germany"
         text="Ausbildung is Germany's vocational education and training system, combining practical workplace training with theoretical education."
-        image="/hero/ausbildung.png"
+        image="/hero/ausbildung.webp"
       />
 
       {/* Highlights strip */}
@@ -77,7 +77,7 @@ export default function Ausbildung() {
               <Reveal key={f} delay={(i % 3) * 100}>
                 <li className="group relative flex h-full items-center gap-4 overflow-hidden rounded-xl border-2 border-slate-200 bg-slate-50 px-5 py-5 sm:gap-5 sm:px-6 sm:py-6 transition-colors duration-300 hover:border-navy">
                   <span className="absolute inset-y-0 left-0 w-1 origin-top scale-y-0 bg-gold transition-transform duration-300 group-hover:scale-y-100" />
-                  <span className="text-3xl font-black leading-none text-navy/15 md:text-4xl transition-colors duration-300 group-hover:text-gold">
+                  <span aria-hidden="true" className="text-3xl font-black leading-none text-navy/15 md:text-4xl transition-colors duration-300 group-hover:text-gold">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="text-base font-semibold text-navy md:text-lg">{f}</span>
@@ -90,8 +90,8 @@ export default function Ausbildung() {
 
       {/* Support steps */}
       <section className="relative overflow-hidden bg-navy-deep text-white">
-        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue/30 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 glow text-blue/30" />
+        <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 glow text-gold/10" />
         <div className="relative mx-auto max-w-7xl px-4 py-12 md:py-16">
           <div className="mx-auto mb-8 max-w-2xl text-center md:mb-12">
             <p className="text-base font-semibold tracking-widest text-gold">OUR SUPPORT</p>
@@ -102,7 +102,7 @@ export default function Ausbildung() {
             {steps.map((s, i) => (
               <li
                 key={s}
-                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur transition duration-300 hover:-translate-y-1 hover:border-gold/60 hover:bg-white/10"
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-6 transition duration-300 hover:-translate-y-1 hover:border-gold/60 hover:bg-white/10"
               >
                 <span
                   aria-hidden="true"

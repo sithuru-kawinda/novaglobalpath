@@ -19,10 +19,10 @@ export default async function NewsTicker() {
           LIVE NEWS
         </span>
 
-        <div className="news-ticker relative min-w-0 flex-1 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_3%,black_97%,transparent)]">
+        <div className="news-ticker relative min-w-0 flex-1 overflow-hidden">
           <ul className="news-ticker-track flex w-max items-center gap-10 whitespace-nowrap text-sm">
             {loop.map((a, i) => (
-              <li key={`${a.id}-${i}`} aria-hidden={i >= items.length}>
+              <li key={`${a.id}-${i}`} inert={i >= items.length} aria-hidden={i >= items.length}>
                 <a
                   href={a.url}
                   target="_blank"
@@ -36,6 +36,8 @@ export default async function NewsTicker() {
               </li>
             ))}
           </ul>
+          <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 left-0 w-[3%] bg-gradient-to-r from-navy to-transparent" />
+          <div aria-hidden="true" className="pointer-events-none absolute inset-y-0 right-0 w-[3%] bg-gradient-to-l from-navy to-transparent" />
         </div>
 
         <a

@@ -9,7 +9,7 @@ export function PageHero({
   title,
   accent,
   text,
-  image = "/hero/germany.png",
+  image = "/hero/germany.webp",
   cta = true,
 }: {
   eyebrow?: string;
@@ -21,13 +21,13 @@ export function PageHero({
 }) {
   return (
     <section className="relative isolate overflow-hidden bg-navy-deep text-white">
-      <Image src={image} alt="" fill priority sizes="100vw" className="-z-20 object-cover object-[50%_40%]" />
+      <Image src={image} alt="" fill loading="eager" fetchPriority="high" quality={75} sizes="100vw" className="-z-20 object-cover object-[50%_40%]" />
       <div className="absolute inset-0 -z-10 bg-navy-deep/75 md:hidden" />
       <div className="absolute inset-0 -z-10 hidden bg-gradient-to-r from-navy-deep via-navy-deep/75 to-navy-deep/10 md:block" />
       <PartnerBadge />
       <div className="mx-auto max-w-7xl animate-[hero-rise_0.5s_ease-out_both] px-4 pb-16 pt-11 md:pb-20 md:pt-12">
         {eyebrow && (
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium backdrop-blur-md">
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium md:backdrop-blur-md">
             <span className="h-2 w-2 rounded-full bg-gold" />
             {eyebrow}
           </p>
@@ -112,7 +112,7 @@ export function CtaBand({
     <section className="bg-white px-4 py-10">
       <div className="mx-auto grid max-w-7xl overflow-hidden rounded-3xl shadow-[0_20px_60px_-10px_rgba(0,0,0,0.45)] ring-1 ring-black/5 lg:grid-cols-2">
         <div className="relative flex flex-col justify-center overflow-hidden bg-gradient-to-br from-navy-deep via-navy to-blue p-6 text-white sm:p-8 md:p-10">
-          <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-gold/20 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 glow text-gold/20" />
           <p className="relative text-sm font-semibold tracking-widest text-gold">GET STARTED</p>
           <h2 className="relative mt-2 text-2xl font-bold capitalize leading-tight sm:text-3xl md:text-4xl">{title}</h2>
           <div className="relative mt-5 h-1 w-16 rounded bg-gold" />
@@ -128,7 +128,7 @@ export function CtaBand({
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/60 px-6 py-3.5 font-semibold sm:w-auto sm:px-8 sm:py-4 text-white transition hover:-translate-y-0.5 hover:border-[#25D366] hover:bg-[#25D366] hover:text-white"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/60 px-6 py-3.5 font-semibold sm:w-auto sm:px-8 sm:py-4 text-white transition hover:-translate-y-0.5 hover:border-[#0a7d4f] hover:bg-[#0a7d4f] hover:text-white"
             >
               <svg viewBox="0 0 32 32" fill="currentColor" className="h-5 w-5" aria-hidden="true">
                 <path d="M16.003 3C8.832 3 3 8.83 3 16c0 2.294.6 4.53 1.74 6.5L3 29l6.68-1.72A12.94 12.94 0 0 0 16.003 29C23.172 29 29 23.17 29 16S23.172 3 16.003 3zm0 23.7a10.7 10.7 0 0 1-5.45-1.49l-.39-.23-3.96 1.02 1.06-3.86-.25-.4A10.67 10.67 0 0 1 5.3 16c0-5.9 4.8-10.7 10.7-10.7S26.7 10.1 26.7 16s-4.8 10.7-10.697 10.7zm5.87-8c-.32-.16-1.9-.94-2.2-1.05-.3-.1-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.27-.19.21-.37.24-.7.08-.32-.16-1.35-.5-2.57-1.58-.95-.85-1.6-1.9-1.78-2.22-.19-.32-.02-.5.14-.66.14-.14.32-.37.48-.56.16-.19.21-.32.32-.54.1-.21.05-.4-.03-.56-.08-.16-.73-1.76-1-2.4-.26-.63-.53-.54-.73-.55h-.62c-.21 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.68s1.15 3.11 1.3 3.32c.16.21 2.26 3.45 5.47 4.84.76.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.3-.21-.62-.37z" />
@@ -142,7 +142,7 @@ export function CtaBand({
           </p>
         </div>
         <div className="relative min-h-[200px] lg:min-h-0">
-          <Image src="/cta-new.jpg" alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+          <Image src="/cta-new.webp" alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/30 to-transparent" />
         </div>
       </div>

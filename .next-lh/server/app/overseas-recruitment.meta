@@ -1,0 +1,37 @@
+{
+  "status": 200,
+  "headers": {
+    "link": "</_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\"",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/overseas-recruitment/layout,_N_T_/overseas-recruitment/page,_N_T_/overseas-recruitment"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/_index",
+    "/overseas-recruitment/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49152,
+    "slots": {
+      "children": {
+        "hints": 49216,
+        "slots": {
+          "children": {
+            "hints": 49312,
+            "slots": null
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/f9e8bd89091c5c0a60ad0c7516e835faaad227365bd1677de15244b448667a54/$/overseas-recruitment",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/overseas-recruitment/page"
+    },
+    "isFallback": false
+  }
+}

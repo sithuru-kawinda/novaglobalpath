@@ -1,0 +1,15 @@
+{
+  "node": {
+    "8004d3b864ff2ba59f2a62b57d038f351852daf3d0": {
+      "workers": {
+        "app/_not-found/page": {
+          "moduleId": 6991,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_0",
+      "filename": "lib/news.ts"
+    }
+  },
+  "edge": {}
+}

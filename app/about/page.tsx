@@ -32,7 +32,7 @@ export default function About() {
         title="Who"
         accent="We Are"
         text="Novaglobalpath (Shipping & Overseas Recruitment) is an international consultancy and recruitment organisation."
-        image="/hero/about.png"
+        image="/hero/about.webp"
       />
 
       {/* Highlights strip */}
@@ -69,7 +69,7 @@ export default function About() {
               <div className="relative h-full border-2 border-navy/20 p-2">
                 <div className="relative h-full overflow-hidden">
                   <Image
-                    src="/education/students-2.png"
+                    src="/education/students-2.webp"
                     alt="A student and an adviser reviewing a textbook together in a library"
                     fill
                     sizes="(min-width: 1024px) 25vw, 50vw"
@@ -82,7 +82,7 @@ export default function About() {
               <div className="relative mt-10 h-[calc(100%-2.5rem)] border-2 border-gold p-2">
                 <div className="relative h-full overflow-hidden">
                   <Image
-                    src="/education/students-3.jpg"
+                    src="/education/students-3.webp"
                     alt="Two students studying together at a laptop in a library"
                     fill
                     sizes="(min-width: 1024px) 25vw, 50vw"
@@ -135,18 +135,18 @@ export default function About() {
             <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">People and Partners We Work With</h2>
             <div className="mx-auto mt-4 h-1 w-16 rounded bg-gold" />
           </div>
-          <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div role="list" className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {serve.map((s, i) => (
               <Reveal key={s} delay={(i % 3) * 100}>
-                <li className="group relative flex h-full items-start gap-4 overflow-hidden rounded-xl border-2 border-navy/30 bg-white p-6 shadow-[0_8px_24px_-6px_rgba(10,25,60,0.3)] transition duration-300 hover:-translate-y-1 hover:border-navy">
+                <div role="listitem" className="group relative flex h-full items-start gap-4 overflow-hidden rounded-xl border-2 border-navy/30 bg-white p-6 shadow-[0_8px_24px_-6px_rgba(10,25,60,0.3)] transition duration-300 hover:-translate-y-1 hover:border-navy">
                   <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-navy text-sm font-bold text-gold transition-colors duration-300 group-hover:bg-gold group-hover:text-navy">
                     {i + 1}
                   </span>
                   <span className="text-base font-semibold leading-snug text-navy md:text-lg">{s}</span>
-                </li>
+                </div>
               </Reveal>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 

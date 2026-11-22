@@ -1,0 +1,15 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/about/page": "app/about/page.js",
+  "/apple-icon.png/route": "app/apple-icon.png/route.js",
+  "/ausbildung-germany/page": "app/ausbildung-germany/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/education/page": "app/education/page.js",
+  "/icon.png/route": "app/icon.png/route.js",
+  "/overseas-recruitment/page": "app/overseas-recruitment/page.js",
+  "/page": "app/page.js",
+  "/shipping-recruitment/page": "app/shipping-recruitment/page.js",
+  "/training/page": "app/training/page.js",
+  "/visa-services/page": "app/visa-services/page.js"
+}

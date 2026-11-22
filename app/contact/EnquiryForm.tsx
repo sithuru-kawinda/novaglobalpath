@@ -87,7 +87,7 @@ function ServiceSelect() {
           open ? "border-navy ring-4 ring-navy/10" : "border-slate-300"
         }`}
       >
-        <span className={value ? "text-navy" : "text-slate-400"}>{value || "Select a service…"}</span>
+        <span className={value ? "text-navy" : "text-slate-500"}>{value || "Select a service…"}</span>
         <svg
           viewBox="0 0 24 24"
           fill="none"

@@ -1,0 +1,37 @@
+{
+  "status": 200,
+  "headers": {
+    "link": "</_next/static/media/07c7676b89ed2778-s.p.2bn3s6zvc0dyp.woff2>; rel=preload; as=\"font\"; crossorigin=\"\"; type=\"font/woff2\"",
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/ausbildung-germany/layout,_N_T_/ausbildung-germany/page,_N_T_/ausbildung-germany"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/_index",
+    "/ausbildung-germany/__PAGE__"
+  ],
+  "prefetchHints": {
+    "hints": 49152,
+    "slots": {
+      "children": {
+        "hints": 49216,
+        "slots": {
+          "children": {
+            "hints": 49312,
+            "slots": null
+          }
+        }
+      }
+    }
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/7b32e2f06388b883eacd1651926e0200393ed222ff871c7d46bfbbb9b73f5663/$/ausbildung-germany",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/ausbildung-germany/page"
+    },
+    "isFallback": false
+  }
+}

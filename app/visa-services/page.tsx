@@ -42,7 +42,7 @@ export default function Visa() {
         title="Professional Guidance for Your"
         accent="Germany Visa Application"
         text="We provide administrative guidance and application preparation assistance for individuals planning to travel to Germany."
-        image="/hero/visa.png"
+        image="/hero/visa.webp"
       />
 
       {/* Highlights strip */}
@@ -88,19 +88,19 @@ export default function Visa() {
             <h2 className="mt-3 text-3xl font-bold text-white md:text-5xl">Our Visa Support Services</h2>
             <div className="mx-auto mt-4 h-1 w-16 rounded bg-gold" />
           </div>
-          <ul className="mx-auto grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div role="list" className="mx-auto grid max-w-6xl gap-4 md:grid-cols-2 lg:grid-cols-3">
             {support.map((s, i) => (
               <Reveal key={s} delay={(i % 3) * 100}>
-                <li className="flex h-full items-center gap-4 rounded-xl bg-white px-5 py-5 shadow-md transition duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+                <div role="listitem" className="flex h-full items-center gap-4 rounded-xl bg-white px-5 py-5 shadow-md transition duration-300 hover:-translate-y-0.5 hover:shadow-xl">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gold text-sm font-bold text-navy">
                     ✓
                   </span>
                   <span className="text-base font-semibold leading-snug text-navy md:text-lg">{s}</span>
-                </li>
+                </div>
               </Reveal>
             ))}
             <Reveal delay={100} className="md:col-span-2">
-              <li className="flex h-full flex-col items-start justify-between gap-3 rounded-xl border-2 border-gold px-5 py-5 text-white sm:flex-row sm:items-center sm:gap-4 sm:px-6">
+              <div role="listitem" className="flex h-full flex-col items-start justify-between gap-3 rounded-xl border-2 border-gold px-5 py-5 text-white sm:flex-row sm:items-center sm:gap-4 sm:px-6">
                 <span className="text-lg font-semibold">Ready to start your visa application?</span>
                 <Link
                   href="/contact"
@@ -108,9 +108,9 @@ export default function Visa() {
                 >
                   Get in touch →
                 </Link>
-              </li>
+              </div>
             </Reveal>
-          </ul>
+          </div>
         </div>
       </section>
 

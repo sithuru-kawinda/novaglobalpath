@@ -13,7 +13,7 @@ const slides = [
     title: "Connecting Global Talent with",
     highlight: "Opportunities in Germany",
     text: "Your trusted partner for international education, maritime recruitment, overseas employment and visa application support.",
-    image: "/hero/germany.png",
+    image: "/hero/germany.webp",
     cta: { href: "#services", label: "Explore Our Services" },
   },
   {
@@ -22,7 +22,7 @@ const slides = [
     title: "Study and Train in Germany with",
     highlight: "Expert Guidance",
     text: "From university admissions to vocational Ausbildung placements, we guide you at every step.",
-    image: "/hero/education.png",
+    image: "/hero/education.webp",
     cta: { href: "/education", label: "Study in Germany" },
   },
   {
@@ -31,7 +31,7 @@ const slides = [
     title: "Crewing Partnerships for",
     highlight: "Cargo and Cruise Operators",
     text: "Qualified deck, engine and hospitality professionals matched with global shipping companies.",
-    image: "/hero/maritime.png",
+    image: "/hero/maritime.webp",
     cta: { href: "/shipping-recruitment", label: "Maritime Recruitment" },
   },
 ];
@@ -103,6 +103,21 @@ const INTERVAL_MS = 5000;
 
 export default function HeroSlider() {
   const [index, setIndex] = useState(0);
+  // Only the first slide's image is fetched up front; the others load after the page has finished loading
+  const [armed, setArmed] = useState(false);
+
+  useEffect(() => {
+    let t: ReturnType<typeof setTimeout>;
+    const arm = () => {
+      t = setTimeout(() => setArmed(true), 1000);
+    };
+    if (document.readyState === "complete") arm();
+    else window.addEventListener("load", arm, { once: true });
+    return () => {
+      clearTimeout(t);
+      window.removeEventListener("load", arm);
+    };
+  }, []);
 
   useEffect(() => {
     const id = setTimeout(() => setIndex((i) => (i + 1) % slides.length), INTERVAL_MS);
@@ -122,15 +137,19 @@ export default function HeroSlider() {
             aria-hidden={i !== index}
             className={`absolute inset-0 -z-10 transition-opacity duration-1000 ${i === index ? "opacity-100" : "opacity-0"}`}
           >
-            <Image
-              src={s.image}
-              alt=""
-              fill
-              priority={i === 0}
-              sizes="100vw"
-              className="object-cover"
-              style={i === index ? { animation: `hero-zoom ${INTERVAL_MS + 1000}ms ease-out forwards` } : undefined}
-            />
+            {(i === 0 || armed) && (
+              <Image
+                src={s.image}
+                alt=""
+                fill
+                loading={i === 0 ? "eager" : "lazy"}
+                fetchPriority={i === 0 ? "high" : "auto"}
+                quality={75}
+                sizes="100vw"
+                className="object-cover"
+                style={i === index ? { animation: `hero-zoom ${INTERVAL_MS + 1000}ms ease-out forwards` } : undefined}
+              />
+            )}
           </div>
         ))}
         <div className="absolute inset-0 -z-10 bg-navy-deep/75 lg:hidden" />
@@ -142,7 +161,7 @@ export default function HeroSlider() {
         <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 pb-36 pt-11 md:pt-12 lg:min-h-[620px]">
           {/* Copy */}
           <div key={index} className="w-full lg:w-2/3" style={{ animation: "hero-rise 700ms ease-out both" }}>
-            <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-md">
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white md:backdrop-blur-md">
               <span className="h-2 w-2 rounded-full bg-gold" />
               {slides[index].tag}
             </p>
@@ -162,7 +181,7 @@ export default function HeroSlider() {
               </Link>
               <Link
                 href="/contact"
-                className="rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-center font-semibold backdrop-blur-md transition hover:bg-white/20"
+                className="rounded-full border border-white/40 bg-white/10 px-7 py-3.5 text-center font-semibold md:backdrop-blur-md transition hover:bg-white/20"
               >
                 Contact Novaglobalpath
               </Link>
@@ -178,8 +197,10 @@ export default function HeroSlider() {
               type="button"
               aria-label={`Show slide ${i + 1}`}
               onClick={() => setIndex(i)}
-              className={`h-2 rounded-full transition-all ${i === index ? "w-8 bg-gold" : "w-2 bg-white/50"}`}
-            />
+              className="group flex h-6 items-center px-1"
+            >
+              <span className={`block h-2 rounded-full transition-all ${i === index ? "w-8 bg-gold" : "w-2 bg-white/50"}`} />
+            </button>
           ))}
         </div>
       </div>
@@ -203,7 +224,7 @@ export default function HeroSlider() {
               </span>
               <span className="min-w-0 flex-1">
                 <span className="block text-base font-semibold text-navy sm:text-lg">{q.title}</span>
-                <span className={`block text-sm ${i % 2 === 1 ? "text-navy/70" : "text-slate-500"}`}>{q.text}</span>
+                <span className={`block text-sm ${i % 2 === 1 ? "text-navy/90" : "text-slate-500"}`}>{q.text}</span>
               </span>
               <span className={`hidden transition-transform group-hover:translate-x-1 sm:block ${i % 2 === 1 ? "text-navy/70" : "text-slate-400"}`} aria-hidden="true">
                 →

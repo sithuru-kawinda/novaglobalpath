@@ -58,6 +58,9 @@ export default function ScrollAnimations() {
     const step = () => {
       if (cancelled) return;
       const waiting: typeof pending = [];
+      const hidden: typeof pending = [];
+      const vh = window.innerHeight;
+      // Read phase: measure everything before touching any class, so layout is computed once
       for (const item of pending) {
         if (!item.el.isConnected) continue;
         if (!isHydrated(item.el)) {
@@ -65,7 +68,11 @@ export default function ScrollAnimations() {
           continue;
         }
         const r = item.el.getBoundingClientRect();
-        if (r.top < window.innerHeight * 0.96 && r.bottom > 0) continue; // already visible: no animation
+        if (r.top < vh * 0.96 && r.bottom > 0) continue; // already visible: no animation
+        hidden.push(item);
+      }
+      // Write phase
+      for (const item of hidden) {
         item.el.style.setProperty("--rv-delay", `${Math.min(item.i, 4) * 60}ms`);
         item.el.classList.add("rv");
         io.observe(item.el);

@@ -68,7 +68,7 @@ export default function Shipping() {
         title="Connecting Maritime Professionals with"
         accent="Global Shipping Companies"
         text="Novaglobalpath supports maritime recruitment and crewing partnerships for international shipping companies, ship management organisations and cruise operators."
-        image="/market-sea.jpg"
+        image="/market-sea.webp"
       />
 
       {/* Highlights strip */}
@@ -140,7 +140,7 @@ export default function Shipping() {
 
       {/* Partnerships: image band */}
       <section className="relative isolate overflow-hidden text-white">
-        <Image src="/market-sea.jpg" alt="" fill sizes="100vw" className="-z-20 object-cover object-[50%_65%]" />
+        <Image src="/market-sea.webp" alt="" fill sizes="100vw" className="-z-20 object-cover object-[50%_65%]" />
         <div className="absolute inset-0 -z-10 bg-navy-deep/85" />
         <div className="mx-auto max-w-4xl px-4 py-12 text-center md:py-20">
           <p className="text-base font-semibold tracking-widest text-gold">PARTNERSHIPS</p>

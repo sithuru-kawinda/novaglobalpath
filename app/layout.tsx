@@ -25,7 +25,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full flex flex-col">
         <Header
           ticker={
-            <Suspense fallback={null}>
+            <Suspense fallback={<div className="h-[41px] bg-navy" aria-hidden="true" />}>
               <NewsTicker />
             </Suspense>
           }

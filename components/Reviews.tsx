@@ -17,7 +17,7 @@ function getVisible() {
 
 function Stars() {
   return (
-    <div className="flex gap-1 text-gold" aria-label="5 out of 5 stars">
+    <div className="flex gap-1 text-gold" role="img" aria-label="5 out of 5 stars">
       {Array.from({ length: 5 }).map((_, i) => (
         <svg key={i} viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden="true">
           <path d="m12 2.5 2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.3 6.1 20.5l1.2-6.5L2.5 9.4l6.6-.9L12 2.5Z" />

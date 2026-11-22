@@ -1,0 +1,25 @@
+{
+  "node": {
+    "8009e7b6967e8ba8e9f458041ad127322494f949d7": {
+      "workers": {
+        "app/contact/page": {
+          "moduleId": 57064,
+          "async": false
+        }
+      },
+      "exportedName": "$$RSC_SERVER_CACHE_0",
+      "filename": "lib/news.ts"
+    },
+    "6084bb9e564382ed0b2ad5b216ff11f6df276165c1": {
+      "workers": {
+        "app/contact/page": {
+          "moduleId": 57064,
+          "async": false
+        }
+      },
+      "exportedName": "sendEnquiry",
+      "filename": "app/contact/actions.ts"
+    }
+  },
+  "edge": {}
+}

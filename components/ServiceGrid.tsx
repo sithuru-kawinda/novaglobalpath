@@ -61,8 +61,8 @@ const icons: Record<string, ReactNode> = {
 export default function ServiceGrid() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-white via-slate-50 to-white">
-      <div className="pointer-events-none absolute -left-24 top-40 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
-      <div className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 rounded-full bg-blue/10 blur-3xl" />
+      <div className="pointer-events-none absolute -left-24 top-40 h-72 w-72 glow text-gold/10" />
+      <div className="pointer-events-none absolute -right-24 bottom-10 h-72 w-72 glow text-blue/10" />
       <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-12">
         <div className="mx-auto mb-10 max-w-2xl text-center md:mb-14">
           <p className="text-base font-semibold tracking-widest text-red">WHAT WE DO</p>

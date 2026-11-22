@@ -122,18 +122,17 @@ export default function Header({ ticker }: { ticker?: ReactNode }) {
       {ticker}
 
       <header
-        className={`sticky top-0 z-40 border-b-4 border-gold bg-white/95 backdrop-blur transition-shadow duration-300 ${
+        className={`sticky top-0 z-40 border-b-4 border-gold bg-white/95 transition-shadow duration-300 ${
           scrolled ? "shadow-lg shadow-navy/10" : "shadow-sm"
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-2.5">
           <Link href="/" onClick={close} aria-label="Novaglobalpath home" className="shrink-0">
             <Image
-              src="/logo-nav.png"
+              src="/logo-nav.webp"
               alt="NOVA GLOBAL - Your pathway to Germany"
               width={1024}
               height={572}
-              priority
               sizes="120px"
               className="h-12 w-auto sm:h-14"
             />
@@ -276,7 +275,7 @@ export default function Header({ ticker }: { ticker?: ReactNode }) {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="rounded-full bg-[#25D366] px-4 py-3 text-center font-semibold text-white transition hover:brightness-110"
+                className="rounded-full bg-[#0a7d4f] px-4 py-3 text-center font-semibold text-white transition hover:brightness-110"
               >
                 WhatsApp
               </a>

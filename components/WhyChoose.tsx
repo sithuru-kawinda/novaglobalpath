@@ -80,8 +80,8 @@ const reasons: { title: string; text: string; icon: ReactNode }[] = [
 export default function WhyChoose() {
   return (
     <section className="relative overflow-hidden bg-navy-deep text-white">
-      <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-blue/30 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
+      <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 glow text-blue/30" />
+      <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 glow text-gold/10" />
 
       <div className="relative mx-auto max-w-7xl px-4 py-12 md:py-16">
         {/* Intro panel */}

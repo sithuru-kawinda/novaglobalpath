@@ -1,0 +1,15 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/apple-icon.png/route": "/apple-icon.png",
+  "/ausbildung-germany/page": "/ausbildung-germany",
+  "/contact/page": "/contact",
+  "/education/page": "/education",
+  "/icon.png/route": "/icon.png",
+  "/overseas-recruitment/page": "/overseas-recruitment",
+  "/page": "/",
+  "/shipping-recruitment/page": "/shipping-recruitment",
+  "/training/page": "/training",
+  "/visa-services/page": "/visa-services"
+}
