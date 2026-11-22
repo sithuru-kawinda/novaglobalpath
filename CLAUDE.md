@@ -36,6 +36,6 @@ Marketing site for Novaglobalpath (education, shipping/overseas recruitment, Aus
 Non-default settings in `next.config.ts` that affect how code must be written:
 - `cacheComponents: true` — Cache Components model; dynamic/uncached data access in routes has specific rules, so check the docs in `node_modules/next/dist/docs/01-app/` (caching, `use cache`) before adding data fetching.
 - `partialPrefetching: true` and `experimental.agentFeedback: true`.
-- `distDir` is `process.env.NEXT_DIST || ".next"` — the `.next-A/` and `.next-B/` dirs are alternate build outputs (e.g. `NEXT_DIST=.next-A npm run dev`) so two servers/builds can run without clobbering each other. They're untracked; don't commit them.
+- `distDir` is `process.env.NEXT_DIST || ".next"` — set `NEXT_DIST` (e.g. `NEXT_DIST=.next-A`) to run two servers/builds side by side without clobbering each other. Alternate dist dirs are not gitignored and Next adds them to `tsconfig.json` `include`; delete the dir and that entry when done.
 - `experimental.inlineCss: true`; `images` allows avif/webp with a restricted `qualities` list (`[60, 75]`) and fixed `deviceSizes`/`imageSizes`, so `next/image` `quality` values must be 60 or 75.
 - Tailwind is wired through Turbopack: a `rules` entry runs `*.css` through `@tailwindcss/turbopack`. There is no `postcss.config`.

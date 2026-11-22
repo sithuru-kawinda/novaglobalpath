@@ -27,7 +27,7 @@ export function PageHero({
       <PartnerBadge />
       <div className="mx-auto max-w-7xl animate-[hero-rise_0.5s_ease-out_both] px-4 pb-16 pt-11 md:pb-20 md:pt-12">
         {eyebrow && (
-          <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium md:backdrop-blur-md">
+          <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium">
             <span className="h-2 w-2 rounded-full bg-gold" />
             {eyebrow}
           </p>

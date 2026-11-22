@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import { Fragment } from "react";
 import Link from "next/link";
-import Reveal from "@/components/Reveal";
 import { CtaBand, PageHero } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -54,7 +54,7 @@ export default function Training() {
           </div>
           <div className="space-y-5">
             {items.map((it, i) => (
-              <Reveal key={it.title}>
+              <Fragment key={it.title}>
                 <article className="group relative grid items-center gap-3 overflow-hidden rounded-xl border-2 border-slate-300 bg-white px-5 py-6 sm:gap-6 sm:px-6 sm:py-8 transition-colors duration-300 hover:border-navy lg:grid-cols-12 lg:gap-10 lg:px-10">
                   <span className="absolute inset-y-0 left-0 w-1 origin-top scale-y-0 bg-gold transition-transform duration-300 group-hover:scale-y-100" />
                   <span aria-hidden="true" className="text-5xl font-black leading-none text-navy/15 md:text-6xl transition-colors duration-300 group-hover:text-gold lg:col-span-2">
@@ -73,7 +73,7 @@ export default function Training() {
                     </Link>
                   </div>
                 </article>
-              </Reveal>
+              </Fragment>
             ))}
           </div>
         </div>

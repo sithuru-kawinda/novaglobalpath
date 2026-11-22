@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Reveal from "@/components/Reveal";
+import { Fragment } from "react";
 import { CtaBand, PageHero } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -74,7 +74,7 @@ export default function Ausbildung() {
           </div>
           <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {fields.map((f, i) => (
-              <Reveal key={f} delay={(i % 3) * 100}>
+              <Fragment key={f}>
                 <li className="group relative flex h-full items-center gap-4 overflow-hidden rounded-xl border-2 border-slate-200 bg-slate-50 px-5 py-5 sm:gap-5 sm:px-6 sm:py-6 transition-colors duration-300 hover:border-navy">
                   <span className="absolute inset-y-0 left-0 w-1 origin-top scale-y-0 bg-gold transition-transform duration-300 group-hover:scale-y-100" />
                   <span aria-hidden="true" className="text-3xl font-black leading-none text-navy/15 md:text-4xl transition-colors duration-300 group-hover:text-gold">
@@ -82,7 +82,7 @@ export default function Ausbildung() {
                   </span>
                   <span className="text-base font-semibold text-navy md:text-lg">{f}</span>
                 </li>
-              </Reveal>
+              </Fragment>
             ))}
           </ul>
         </div>
