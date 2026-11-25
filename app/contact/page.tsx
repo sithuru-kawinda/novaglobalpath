@@ -50,6 +50,7 @@ export default function Contact() {
     {
       label: "Office",
       value: site.address,
+      note: site.addressNote,
       icon: (
         <Svg>
           <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z" />
@@ -87,6 +88,7 @@ export default function Contact() {
                     ) : (
                       <p className="mt-0.5 text-lg font-medium">{c.value}</p>
                     )}
+                    {c.note && <p className="mt-0.5 text-sm font-semibold text-gold">{c.note}</p>}
                   </div>
                 </li>
               ))}

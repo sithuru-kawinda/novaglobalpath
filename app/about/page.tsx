@@ -127,6 +127,108 @@ export default function About() {
         </div>
       </section>
 
+      {/* Director spotlight */}
+      <section className="bg-white">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 md:py-16 lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-14">
+          <Reveal>
+            <div className="mx-auto w-full max-w-[15rem] border-2 sm:max-w-[18rem] border-navy/20 p-2">
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src="/team/rumesh-malinga-portrait.webp"
+                  alt="Rumesh Malinga, Director of International Operations – Germany"
+                  fill
+                  sizes="288px"
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
+          </Reveal>
+          <Reveal delay={150}>
+            <div className="text-center lg:text-left">
+              <p className="text-base font-semibold tracking-widest text-red">MEET OUR DIRECTOR</p>
+              <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">Rumesh Malinga</h2>
+              <p className="mt-2 text-lg font-semibold text-[#c9941a] md:text-xl">Director, International Operations – Germany</p>
+              <div className="mx-auto mt-4 h-1 w-16 rounded bg-gold lg:mx-0" />
+              <p className="mt-5 text-base leading-relaxed text-slate-600 md:text-xl md:leading-relaxed">
+                Rumesh leads Novaglobalpath&apos;s international operations from our office in Schenefeld, Germany,
+                working with students, vocational applicants and professionals as they prepare for education and career
+                opportunities in Germany.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-slate-600 md:text-xl md:leading-relaxed">
+                Based in Germany, Rumesh is a direct point of contact for applicants and partner institutions.
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
+                <a
+                  href="mailto:novagerman@outlook.de"
+                  className="min-h-11 rounded-full bg-navy px-7 py-3.5 text-center font-semibold text-white shadow-lg shadow-navy/30 transition hover:-translate-y-0.5 hover:bg-blue"
+                >
+                  Email Rumesh
+                </a>
+                <a
+                  href="https://wa.me/4915752832325"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="min-h-11 rounded-full border-2 border-navy/40 px-7 py-3.5 text-center font-semibold text-navy transition hover:-translate-y-0.5 hover:border-[#0a7d4f] hover:bg-[#0a7d4f] hover:text-white"
+                >
+                  WhatsApp +49 1575 2832325
+                </a>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Head of Manager spotlight */}
+      <section className="bg-navy">
+        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 md:py-16 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-14">
+          <Reveal delay={150} className="order-2 lg:order-1">
+            <div className="text-center lg:text-left">
+              <p className="text-base font-semibold tracking-widest text-gold">MEET OUR SENIOR CONSULTANT</p>
+              <h2 className="mt-3 text-3xl font-bold text-white md:text-5xl">Dilantha Sandaruwan</h2>
+              <p className="mt-2 text-lg font-semibold text-gold md:text-xl">Head of Manager, Senior Consultant</p>
+              <div className="mx-auto mt-4 h-1 w-16 rounded bg-gold lg:mx-0" />
+              <p className="mt-5 text-base leading-relaxed text-white/85 md:text-xl md:leading-relaxed">
+                Dilantha serves as Head of Manager and Senior Consultant, guiding applicants in Sri Lanka through their preparation for
+                education, vocational training and career opportunities in Germany.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-white/85 md:text-xl md:leading-relaxed">
+                Dilantha is a direct point of contact for students, Ausbildung applicants and professionals who need clear,
+                step-by-step support.
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:justify-center lg:justify-start">
+                <a
+                  href="mailto:novagerman@outlook.de"
+                  className="min-h-11 rounded-full bg-gold px-7 py-3.5 text-center font-semibold text-navy shadow-lg shadow-black/30 transition hover:-translate-y-0.5 hover:brightness-110"
+                >
+                  Email Dilantha
+                </a>
+                <a
+                  href="https://wa.me/94766120921"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="min-h-11 rounded-full border-2 border-white/60 px-7 py-3.5 text-center font-semibold text-white transition hover:-translate-y-0.5 hover:border-[#0a7d4f] hover:bg-[#0a7d4f]"
+                >
+                  WhatsApp +94 76 6120921
+                </a>
+              </div>
+            </div>
+          </Reveal>
+          <Reveal className="order-1 lg:order-2">
+            <div className="mx-auto w-full max-w-[15rem] border-2 sm:max-w-[18rem] border-gold p-2">
+              <div className="relative aspect-[4/5] overflow-hidden">
+                <Image
+                  src="/team/head-of-manager.webp"
+                  alt="Dilantha Sandaruwan, Head of Manager and Senior Consultant"
+                  fill
+                  sizes="288px"
+                  className="object-cover object-top"
+                />
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Who we serve */}
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">

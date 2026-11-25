@@ -6,7 +6,8 @@ export const site = {
   phone: "+49 176 70452479",
   whatsapp: "4917670452479",
   email: "novagerman@outlook.de",
-  address: "Colombo, Sri Lanka",
+  address: "294/9 Ihalakaragahamuna, Kadawatha, Sri Lanka",
+  addressNote: "Appointment only",
 };
 
 // Add the real profile URLs; empty ones are hidden in the footer.

@@ -22,6 +22,7 @@ No test framework is configured.
 
 Marketing site for Novaglobalpath (education, shipping/overseas recruitment, Ausbildung, visa services for Germany). App Router, TypeScript strict, Tailwind CSS 4. No `src/` directory; the `@/*` import alias maps to the repo root. Top-level dirs: `app/` (routes), `components/`, `lib/`.
 
+- **Content disclaimer**: the site offers consultancy/application support only. Copy must never promise or imply guaranteed admission, employment or visa approval (decisions rest with German authorities/missions).
 - **Routes**: one folder per service page under `app/` (`about`, `education`, `shipping-recruitment`, `overseas-recruitment`, `ausbildung-germany`, `training`, `visa-services`, `contact`), plus `app/page.tsx` home.
 - **Site content lives in `lib/`**: `lib/site.ts` holds contact details, socials, the `nav` list and `services` list (used by Header, Footer, home grid) — add a page by creating the route *and* adding it to `nav`/`services`. Its phone/WhatsApp/email values are placeholders (TODO from client). `lib/reviews.ts` is sample/placeholder testimonials.
 - **Shared UI primitives** in `components/ui.tsx` (`PageHero`, `Section`, `BulletList`, `Card`, `ButtonLink`, `CtaBand`) — service pages are composed from these.

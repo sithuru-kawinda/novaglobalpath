@@ -136,7 +136,10 @@ export default function Footer() {
                   <circle cx="12" cy="10" r="2.500" />
                 </svg>
               </span>
-              <span>{site.address}</span>
+              <span>
+                {site.address}
+                <span className="block text-sm font-semibold text-gold">({site.addressNote})</span>
+              </span>
             </li>
             <li className="flex gap-3">
               <span className="mt-0.5 text-gold">
