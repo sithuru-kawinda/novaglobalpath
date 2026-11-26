@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import NewsTicker from "@/components/NewsTicker";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import PromoPopup from "@/components/PromoPopup";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Footer />
         <WhatsAppButton />
         <ScrollAnimations />
+        <PromoPopup />
       </body>
     </html>
   );
