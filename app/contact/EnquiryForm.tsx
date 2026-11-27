@@ -132,6 +132,14 @@ function ServiceSelect() {
 
 export default function EnquiryForm() {
   const [state, action, pending] = useActionState(sendEnquiry, initial);
+  const [dismissed, setDismissed] = useState<EnquiryState | null>(null);
+
+  useEffect(() => {
+    if (!state.message || dismissed === state) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setDismissed(state);
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [state, dismissed]);
 
   return (
     <form action={action} className="grid gap-4 md:grid-cols-2">
@@ -187,17 +195,42 @@ export default function EnquiryForm() {
         >
           {pending ? "Sending…" : "Send Enquiry →"}
         </button>
-        {state.message && (
-          <p
-            role="status"
-            className={`mt-3 rounded-lg px-4 py-3 text-center font-medium ${
-              state.ok ? "bg-green-50 text-green-700" : "bg-red-50 text-red-600"
-            }`}
-          >
-            {state.message}
-          </p>
-        )}
       </div>
+      {state.message && dismissed !== state && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-navy-deep/60 p-4 backdrop-blur-sm"
+          onClick={() => setDismissed(state)}
+        >
+          <div
+            role="alertdialog"
+            aria-modal="true"
+            aria-labelledby="enquiry-result-title"
+            onClick={(e) => e.stopPropagation()}
+            className="w-full max-w-sm rounded-2xl bg-white p-6 text-center shadow-2xl"
+          >
+            <div
+              className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full text-3xl font-bold ${
+                state.ok ? "bg-green-100 text-green-600" : "bg-red-100 text-red-600"
+              }`}
+              aria-hidden="true"
+            >
+              {state.ok ? "✓" : "!"}
+            </div>
+            <h3 id="enquiry-result-title" className="text-xl font-bold text-navy">
+              {state.ok ? "Message sent" : "Message not sent"}
+            </h3>
+            <p className="mt-2 text-slate-600">{state.message}</p>
+            <button
+              type="button"
+              autoFocus
+              onClick={() => setDismissed(state)}
+              className="mt-5 min-h-11 w-full rounded-lg bg-navy px-6 py-2.5 font-semibold text-white transition hover:bg-navy-deep"
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </form>
   );
 }
