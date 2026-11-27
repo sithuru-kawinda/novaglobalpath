@@ -11,7 +11,26 @@ import PromoPopup from "@/components/PromoPopup";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"], display: "swap" });
 
+const ogTitle = "Novaglobalpath | Your Pathway to Germany";
+const ogDescription =
+  "Education, maritime & overseas recruitment, Ausbildung and visa application support for Germany. Expert guidance from Novaglobalpath.";
+
 export const metadata: Metadata = {
+  // TODO: set NEXT_PUBLIC_SITE_URL to the real domain so OG image URLs are absolute
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://novaglobalpath.com"),
+  openGraph: {
+    type: "website",
+    siteName: "Novaglobalpath",
+    title: ogTitle,
+    description: ogDescription,
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Novaglobalpath – Connecting Global Talent with Opportunities in Germany" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: ogTitle,
+    description: ogDescription,
+    images: ["/og-image.jpg"],
+  },
   title: {
     default: "Novaglobalpath | Connecting Global Talent with Opportunities in Germany",
     template: "%s | Novaglobalpath",
