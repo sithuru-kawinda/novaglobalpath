@@ -143,4 +143,22 @@ body {
       padding-inline: 3rem;
     }
   }
+
+  /* Top bar, ticker and main nav: tighter gutters (16 / 24 / 36px), wider than page sections */
+  .header-container {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 120rem;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .header-container {
+      padding-inline: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .header-container {
+      padding-inline: 2.25rem;
+    }
+  }
 }

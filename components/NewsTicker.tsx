@@ -10,7 +10,7 @@ export default async function NewsTicker() {
 
   return (
     <div className="bg-navy text-white" aria-label="Live Germany news">
-      <div className="flex items-center gap-3 site-container py-2 sm:gap-4">
+      <div className="flex items-center gap-3 header-container py-2 sm:gap-4">
         <span className="relative z-10 flex shrink-0 items-center gap-2 rounded-full bg-gold px-2.5 py-1 text-[11px] font-bold tracking-wider text-navy sm:px-3 sm:text-xs">
           <span className="relative flex h-2 w-2">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red opacity-75" />
