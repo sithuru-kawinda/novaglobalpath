@@ -33,7 +33,7 @@ const markets = [
 export default function TargetMarkets() {
   return (
     <section className="bg-gradient-to-b from-white via-slate-50 to-white">
-      <div className="mx-auto max-w-7xl px-4 pb-16 pt-12">
+      <div className="site-container pb-16 pt-12">
         <div className="mx-auto mb-10 max-w-2xl text-center md:mb-14">
           <p className="text-base font-semibold tracking-widest text-red">WHERE WE WORK</p>
           <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">Our Target Markets</h2>

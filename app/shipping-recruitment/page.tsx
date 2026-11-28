@@ -73,7 +73,7 @@ export default function Shipping() {
 
       {/* Highlights strip */}
       <section className="bg-white">
-        <dl className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
+        <dl className="site-container grid grid-cols-2 md:grid-cols-4">
           {stats.map((s) => (
             <div key={s.value} className="px-4 py-6 text-center md:py-8 md:border-r md:border-navy/15 md:last:border-r-0">
               <dt className="text-base font-extrabold text-navy sm:text-lg md:text-xl">{s.value}</dt>
@@ -85,7 +85,7 @@ export default function Shipping() {
 
       {/* Coverage: tabs */}
       <section id="coverage" className="scroll-mt-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 md:py-20">
+        <div className="site-container py-12 md:py-20">
           <div className="mx-auto mb-10 max-w-2xl text-center">
             <p className="text-base font-semibold tracking-widest text-red">RECRUITMENT COVERAGE</p>
             <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">Roles We Recruit For</h2>
@@ -117,7 +117,7 @@ export default function Shipping() {
 
       {/* Employer services: stepped flow */}
       <section className="bg-slate-50">
-        <div className="mx-auto max-w-7xl px-4 py-12 md:py-20">
+        <div className="site-container py-12 md:py-20">
           <div className="mx-auto mb-10 max-w-2xl text-center md:mb-14">
             <p className="text-base font-semibold tracking-widest text-red">FOR EMPLOYERS</p>
             <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">Our Recruitment Services</h2>
@@ -142,7 +142,7 @@ export default function Shipping() {
       <section className="relative isolate overflow-hidden text-white">
         <Image src="/market-sea.webp" alt="" fill sizes="100vw" className="-z-20 object-cover object-[50%_65%]" />
         <div className="absolute inset-0 -z-10 bg-navy-deep/85" />
-        <div className="mx-auto max-w-4xl px-4 py-12 text-center md:py-20">
+        <div className="mx-auto max-w-4xl site-px py-12 text-center md:py-20">
           <p className="text-base font-semibold tracking-widest text-gold">PARTNERSHIPS</p>
           <div className="mx-auto mt-4 h-1 w-16 rounded bg-gold" />
           <p className="mt-5 text-lg leading-relaxed md:mt-6 md:text-3xl md:leading-snug">

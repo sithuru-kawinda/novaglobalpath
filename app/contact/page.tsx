@@ -65,7 +65,7 @@ export default function Contact() {
       <PageHero eyebrow="Contact" title="Let's Start" accent="Your Journey" cta={false} text="Send us an enquiry and we will get back to you." image="/hero/contact.webp" />
 
       <section className="bg-slate-50">
-        <div className="mx-auto grid max-w-6xl items-stretch gap-6 px-4 pb-24 pt-10 md:py-12 lg:grid-cols-12">
+        <div className="mx-auto grid max-w-6xl items-stretch gap-6 site-px pb-24 pt-10 md:py-12 lg:grid-cols-12">
           {/* Left: contact details */}
           <aside className="relative flex flex-col overflow-hidden rounded-2xl bg-gradient-to-br from-navy-deep via-navy to-blue p-6 text-white sm:p-8 shadow-[0_20px_60px_-15px_rgba(10,25,60,0.4)] lg:col-span-5">
             <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 glow text-gold/20" />

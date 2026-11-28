@@ -25,7 +25,7 @@ export function PageHero({
       <div className="absolute inset-0 -z-10 bg-navy-deep/75 md:hidden" />
       <div className="absolute inset-0 -z-10 hidden bg-gradient-to-r from-navy-deep via-navy-deep/75 to-navy-deep/10 md:block" />
       <PartnerBadge />
-      <div className="mx-auto max-w-7xl animate-[hero-rise_0.5s_ease-out_both] px-4 pb-16 pt-11 md:pb-20 md:pt-12">
+      <div className="animate-[hero-rise_0.5s_ease-out_both] site-container pb-16 pt-11 md:pb-20 md:pt-12">
         {eyebrow && (
           <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium">
             <span className="h-2 w-2 rounded-full bg-gold" />
@@ -55,7 +55,7 @@ export function PageHero({
 export function Section({ title, children, tint }: { title?: string; children: ReactNode; tint?: boolean }) {
   return (
     <section className={tint ? "bg-slate-50" : ""}>
-      <div className="mx-auto max-w-7xl px-4 py-14">
+      <div className="site-container py-14">
         {title && <h2 className="mb-8 text-2xl font-bold text-navy md:text-3xl">{title}</h2>}
         {children}
       </div>
@@ -109,8 +109,8 @@ export function CtaBand({
   text?: string;
 }) {
   return (
-    <section className="bg-white px-4 py-10">
-      <div className="mx-auto grid max-w-7xl overflow-hidden rounded-3xl shadow-[0_20px_60px_-10px_rgba(0,0,0,0.45)] ring-1 ring-black/5 lg:grid-cols-2">
+    <section className="bg-white site-px py-10">
+      <div className="mx-auto grid max-w-[78rem] overflow-hidden rounded-3xl shadow-[0_20px_60px_-10px_rgba(0,0,0,0.45)] ring-1 ring-black/5 lg:grid-cols-2">
         <div className="relative flex flex-col justify-center overflow-hidden bg-gradient-to-br from-navy-deep via-navy to-blue p-6 text-white sm:p-8 md:p-10">
           <div className="pointer-events-none absolute -bottom-24 -left-24 h-64 w-64 glow text-gold/20" />
           <p className="relative text-sm font-semibold tracking-widest text-gold">GET STARTED</p>

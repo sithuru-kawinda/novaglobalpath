@@ -102,7 +102,7 @@ export default function Header({ ticker }: { ticker?: ReactNode }) {
     <>
       {/* Top utility bar */}
       <div className="hidden bg-navy-deep text-xs text-white/80 md:block">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
+        <div className="flex items-center justify-between site-container py-2">
           <p className="tracking-wide font-medium text-yellow-300">Your Pathway to Germany for Education, Careers, Ausbildung &amp; Visas</p>
           <div className="flex items-center gap-5">
             <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="transition hover:text-gold">
@@ -126,7 +126,7 @@ export default function Header({ ticker }: { ticker?: ReactNode }) {
           scrolled ? "shadow-lg shadow-navy/10" : "shadow-sm"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-2.5">
+        <div className="flex items-center justify-between gap-6 site-container py-2.5">
           <Link href="/" onClick={close} aria-label="Novaglobalpath home" className="shrink-0">
             <Image
               src="/logo-nav.webp"

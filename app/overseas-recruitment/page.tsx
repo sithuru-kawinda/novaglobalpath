@@ -35,7 +35,7 @@ export default function Overseas() {
 
       {/* Highlights strip */}
       <section className="border-b border-navy/15 bg-white">
-        <dl className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
+        <dl className="site-container grid grid-cols-2 md:grid-cols-4">
           {highlights.map((h) => (
             <div key={h.value} className="px-4 py-6 text-center md:py-8 md:border-r md:border-navy/15 md:last:border-r-0">
               <dt className="text-base font-extrabold text-navy sm:text-lg md:text-xl">{h.value}</dt>
@@ -47,7 +47,7 @@ export default function Overseas() {
 
       {/* How we support candidates */}
       <section className="bg-white">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 md:py-16 lg:grid-cols-12 lg:gap-12 lg:items-center">
+        <div className="grid gap-8 site-container py-12 md:py-16 lg:grid-cols-12 lg:gap-12 lg:items-center">
           <div className="lg:col-span-5">
             <p className="text-base font-semibold tracking-widest text-red">FOR CANDIDATES</p>
             <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">How We Support Candidates</h2>
@@ -85,7 +85,7 @@ export default function Overseas() {
       <section className="relative overflow-hidden bg-navy-deep text-white">
         <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 glow text-blue/30" />
         <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 glow text-gold/10" />
-        <div className="relative mx-auto max-w-4xl px-4 py-12 text-center md:py-16">
+        <div className="relative mx-auto max-w-4xl site-px py-12 text-center md:py-16">
           <p className="text-base font-semibold tracking-widest text-gold">SECTORS AND REQUIREMENTS</p>
           <h2 className="mt-3 text-3xl font-bold md:text-5xl">Opportunities Coming Soon</h2>
           <div className="mx-auto mt-4 h-1 w-16 rounded bg-gold" />

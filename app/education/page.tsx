@@ -114,7 +114,7 @@ export default function Education() {
         <div className="absolute inset-0 -z-10 bg-navy-deep/75 md:hidden" />
         <div className="absolute inset-0 -z-10 hidden bg-gradient-to-r from-navy-deep via-navy-deep/75 to-navy-deep/10 md:block" />
         <PartnerBadge />
-        <div className="mx-auto max-w-7xl animate-[hero-rise_0.5s_ease-out_both] px-4 pb-16 pt-11 md:pb-20 md:pt-12">
+        <div className="animate-[hero-rise_0.5s_ease-out_both] site-container pb-16 pt-11 md:pb-20 md:pt-12">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium md:backdrop-blur-md">
             <span className="h-2 w-2 rounded-full bg-gold" />
             Education &amp; Admissions
@@ -145,7 +145,7 @@ export default function Education() {
 
       {/* Highlights strip */}
       <section className="border-b border-navy/15 bg-white">
-        <dl className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
+        <dl className="site-container grid grid-cols-2 md:grid-cols-4">
           {highlights.map((h) => (
             <div key={h.value} className="px-4 py-6 text-center md:py-8 md:border-r md:border-navy/15 md:last:border-r-0">
               <dt className="text-base font-extrabold text-navy sm:text-lg md:text-xl">{h.value}</dt>
@@ -157,7 +157,7 @@ export default function Education() {
 
       {/* Why Germany */}
       <section className="bg-white">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:py-16 lg:grid-cols-2 lg:items-stretch lg:gap-12">
+        <div className="grid gap-10 site-container py-12 md:py-16 lg:grid-cols-2 lg:items-stretch lg:gap-12">
           <div className="flex flex-col">
             <p className="text-base font-semibold tracking-widest text-red">WHY GERMANY</p>
             <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">A Smart Place to Study</h2>
@@ -219,7 +219,7 @@ export default function Education() {
 
       {/* Study pathways */}
       <section className="bg-slate-50">
-        <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+        <div className="site-container py-12 md:py-16">
           <Heading
             eyebrow="STUDY PATHWAYS"
             title="Find the Route That Fits You"
@@ -270,7 +270,7 @@ export default function Education() {
       <section id="process" className="relative scroll-mt-20 overflow-hidden bg-navy-deep text-white">
         <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 glow text-blue/30" />
         <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 glow text-gold/10" />
-        <div className="relative mx-auto max-w-7xl px-4 py-12 md:py-16">
+        <div className="relative site-container py-12 md:py-16">
           <div className="mx-auto mb-8 max-w-2xl text-center md:mb-12">
             <p className="text-base font-semibold tracking-widest text-gold">OUR PROCESS</p>
             <h2 className="mt-3 text-3xl font-bold md:text-5xl">From First Chat to First Lecture</h2>
@@ -321,7 +321,7 @@ export default function Education() {
 
       {/* Documents + intakes */}
       <section className="bg-white">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 py-12 md:gap-8 md:py-16 lg:grid-cols-2">
+        <div className="grid gap-6 site-container py-12 md:gap-8 md:py-16 lg:grid-cols-2">
           <Reveal>
             <div className="h-full rounded-3xl border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-5 shadow-sm sm:p-8">
               <p className="text-sm font-semibold tracking-widest text-red">DOCUMENT CHECKLIST</p>
@@ -384,7 +384,7 @@ export default function Education() {
 
       {/* FAQ */}
       <section className="bg-slate-50">
-        <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 md:py-16 lg:grid-cols-12 lg:gap-10">
+        <div className="mx-auto grid max-w-6xl gap-8 site-px py-12 md:py-16 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-28">
               <p className="text-base font-semibold tracking-widest text-red">FAQ</p>

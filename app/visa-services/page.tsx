@@ -47,7 +47,7 @@ export default function Visa() {
 
       {/* Highlights strip */}
       <section className="border-b border-navy/15 bg-white">
-        <dl className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
+        <dl className="site-container grid grid-cols-2 md:grid-cols-4">
           {highlights.map((h) => (
             <div key={h.value} className="px-4 py-6 text-center md:py-8 md:border-r md:border-navy/15 md:last:border-r-0">
               <dt className="text-base font-extrabold text-navy sm:text-lg md:text-xl">{h.value}</dt>
@@ -59,7 +59,7 @@ export default function Visa() {
 
       {/* Visa categories */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+        <div className="site-container py-12 md:py-16">
           <div className="mx-auto mb-8 max-w-2xl text-center md:mb-12">
             <p className="text-base font-semibold tracking-widest text-red">VISA CATEGORIES</p>
             <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">Which Visa Do You Need?</h2>
@@ -82,7 +82,7 @@ export default function Visa() {
 
       {/* Support services */}
       <section className="bg-navy text-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+        <div className="site-container py-12 md:py-16">
           <div className="mx-auto mb-8 max-w-2xl text-center md:mb-12">
             <p className="text-base font-semibold tracking-widest text-gold">OUR SUPPORT</p>
             <h2 className="mt-3 text-3xl font-bold text-white md:text-5xl">Our Visa Support Services</h2>
@@ -116,7 +116,7 @@ export default function Visa() {
 
       {/* Important notice */}
       <section className="bg-white">
-        <div className="mx-auto max-w-5xl px-4 py-10 md:py-14">
+        <div className="mx-auto max-w-5xl site-px py-10 md:py-14">
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_32px_-8px_rgba(10,25,60,0.25)]">
             <div className="flex items-center gap-3 bg-navy px-6 py-4 md:px-8">
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-red text-lg font-bold text-white" aria-hidden="true">

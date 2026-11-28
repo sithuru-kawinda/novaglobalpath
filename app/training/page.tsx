@@ -34,7 +34,7 @@ export default function Training() {
 
       {/* Highlights strip */}
       <section className="border-b border-navy/15 bg-white">
-        <dl className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
+        <dl className="site-container grid grid-cols-2 md:grid-cols-4">
           {highlights.map((h) => (
             <div key={h.value} className="px-4 py-6 text-center md:py-8 md:border-r md:border-navy/15 md:last:border-r-0">
               <dt className="text-base font-extrabold text-navy sm:text-lg md:text-xl">{h.value}</dt>
@@ -46,7 +46,7 @@ export default function Training() {
 
       {/* Training programmes */}
       <section className="bg-slate-50">
-        <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+        <div className="site-container py-12 md:py-16">
           <div className="mx-auto mb-8 max-w-2xl text-center md:mb-12">
             <p className="text-base font-semibold tracking-widest text-red">WHAT WE OFFER</p>
             <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">Preparation for Germany</h2>

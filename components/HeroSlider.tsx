@@ -158,7 +158,7 @@ export default function HeroSlider() {
 
         <PartnerBadge />
 
-        <div className="mx-auto grid max-w-7xl items-start gap-10 px-4 pb-36 pt-11 md:pt-12 lg:min-h-[620px]">
+        <div className="grid items-start gap-10 site-container pb-36 pt-11 md:pt-12 lg:min-h-[620px]">
           {/* Copy */}
           <div key={index} className="w-full lg:w-2/3" style={{ animation: "hero-rise 700ms ease-out both" }}>
             <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white md:backdrop-blur-md">
@@ -206,7 +206,7 @@ export default function HeroSlider() {
       </div>
 
       {/* Floating quick-access bar */}
-      <div className="relative z-10 mx-auto -mt-16 max-w-6xl px-4">
+      <div className="relative z-10 mx-auto -mt-16 max-w-6xl site-px">
         <div className="grid grid-cols-2 overflow-hidden rounded-2xl bg-white shadow-2xl shadow-navy/25 ring-1 ring-slate-200 lg:grid-cols-4">
           {quick.map((q, i) => (
             <Link

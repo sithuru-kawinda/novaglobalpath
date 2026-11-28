@@ -50,7 +50,7 @@ export default function Ausbildung() {
 
       {/* Highlights strip */}
       <section className="border-b border-navy/15 bg-white">
-        <dl className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
+        <dl className="site-container grid grid-cols-2 md:grid-cols-4">
           {highlights.map((h) => (
             <div key={h.value} className="px-4 py-6 text-center md:py-8 md:border-r md:border-navy/15 md:last:border-r-0">
               <dt className="text-base font-extrabold text-navy sm:text-lg md:text-xl">{h.value}</dt>
@@ -62,7 +62,7 @@ export default function Ausbildung() {
 
       {/* Fields */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+        <div className="site-container py-12 md:py-16">
           <div className="mx-auto mb-8 max-w-2xl text-center md:mb-12">
             <p className="text-base font-semibold tracking-widest text-red">POPULAR FIELDS</p>
             <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">Choose Your Ausbildung Field</h2>
@@ -92,7 +92,7 @@ export default function Ausbildung() {
       <section className="relative overflow-hidden bg-navy-deep text-white">
         <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 glow text-blue/30" />
         <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 glow text-gold/10" />
-        <div className="relative mx-auto max-w-7xl px-4 py-12 md:py-16">
+        <div className="relative site-container py-12 md:py-16">
           <div className="mx-auto mb-8 max-w-2xl text-center md:mb-12">
             <p className="text-base font-semibold tracking-widest text-gold">OUR SUPPORT</p>
             <h2 className="mt-3 text-3xl font-bold md:text-5xl">Our Ausbildung Support</h2>
@@ -122,7 +122,7 @@ export default function Ausbildung() {
 
       {/* Language note */}
       <section className="bg-white">
-        <div className="mx-auto max-w-5xl px-4 py-10 md:py-14">
+        <div className="mx-auto max-w-5xl site-px py-10 md:py-14">
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_12px_32px_-8px_rgba(10,25,60,0.25)]">
             <div className="flex items-center gap-3 bg-navy px-5 py-4 md:px-8">
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gold text-sm font-bold text-navy" aria-hidden="true">

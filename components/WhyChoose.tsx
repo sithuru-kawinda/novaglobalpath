@@ -83,7 +83,7 @@ export default function WhyChoose() {
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 glow text-blue/30" />
       <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 glow text-gold/10" />
 
-      <div className="relative mx-auto max-w-7xl px-4 py-12 md:py-16">
+      <div className="relative site-container py-12 md:py-16">
         {/* Intro panel */}
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-base font-semibold tracking-widest text-gold">WHY US</p>

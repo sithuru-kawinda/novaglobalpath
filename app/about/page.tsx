@@ -37,7 +37,7 @@ export default function About() {
 
       {/* Highlights strip */}
       <section className="border-b border-navy/15 bg-white">
-        <dl className="mx-auto grid max-w-7xl grid-cols-2 md:grid-cols-4">
+        <dl className="site-container grid grid-cols-2 md:grid-cols-4">
           {highlights.map((h) => (
             <div key={h.value} className="px-4 py-6 text-center md:py-8 md:border-r md:border-navy/15 md:last:border-r-0">
               <dt className="text-base font-extrabold text-navy sm:text-lg md:text-xl">{h.value}</dt>
@@ -49,7 +49,7 @@ export default function About() {
 
       {/* Intro */}
       <section className="bg-white">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 md:py-16 lg:grid-cols-2 lg:gap-12">
+        <div className="grid items-center gap-8 site-container py-12 md:py-16 lg:grid-cols-2 lg:gap-12">
           <div>
             <p className="text-base font-semibold tracking-widest text-red">ABOUT NOVAGLOBALPATH</p>
             <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">Your Bridge to Opportunities in Germany</h2>
@@ -97,7 +97,7 @@ export default function About() {
 
       {/* Mission & vision */}
       <section className="bg-navy">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 md:grid-cols-2">
+        <div className="grid gap-8 site-container py-12 md:grid-cols-2">
           <Reveal>
             <article className="flex h-full flex-col items-center rounded-2xl text-center bg-white p-6 shadow-[0_16px_40px_-10px_rgba(0,0,0,0.5)] md:p-8">
               <span className="w-fit rounded-full bg-navy px-4 py-1.5 text-sm font-bold tracking-widest text-gold">
@@ -129,7 +129,7 @@ export default function About() {
 
       {/* Director spotlight */}
       <section className="bg-white">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 md:py-16 lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-14">
+        <div className="grid items-center gap-8 site-container py-12 md:py-16 lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-14">
           <Reveal>
             <div className="mx-auto w-full max-w-[15rem] border-2 sm:max-w-[18rem] border-navy/20 p-2">
               <div className="relative aspect-[4/5] overflow-hidden">
@@ -180,7 +180,7 @@ export default function About() {
 
       {/* Head of Manager spotlight */}
       <section className="bg-navy">
-        <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 md:py-16 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-14">
+        <div className="grid items-center gap-8 site-container py-12 md:py-16 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-14">
           <Reveal delay={150} className="order-2 lg:order-1">
             <div className="text-center lg:text-left">
               <p className="text-base font-semibold tracking-widest text-gold">MEET OUR SENIOR CONSULTANT</p>
@@ -231,7 +231,7 @@ export default function About() {
 
       {/* Who we serve */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-12 md:py-16">
+        <div className="site-container py-12 md:py-16">
           <div className="mx-auto mb-8 max-w-2xl text-center md:mb-12">
             <p className="text-base font-semibold tracking-widest text-red">WHO WE SERVE</p>
             <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">People and Partners We Work With</h2>

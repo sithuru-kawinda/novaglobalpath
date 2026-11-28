@@ -46,7 +46,7 @@ export default function Footer() {
     <footer className="relative overflow-hidden border-t-4 border-gold bg-navy-deep text-white/75">
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 glow text-blue/20" />
       {/* Main columns */}
-      <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:grid-cols-2 md:py-16 lg:grid-cols-[1.4fr_1fr_1.2fr_1.2fr]">
+      <div className="relative grid gap-10 site-container py-12 sm:grid-cols-2 md:py-16 lg:grid-cols-[1.4fr_1fr_1.2fr_1.2fr]">
         <div>
           <Image
             src="/logo.webp"
@@ -172,7 +172,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="relative border-t border-white/10 bg-black/20">
-        <div className="mx-auto max-w-7xl px-4 py-6 text-sm">
+        <div className="site-container py-6 text-sm">
           <div className="flex flex-col items-center justify-between gap-2 md:flex-row">
             <p>© 2026 {site.name}. All rights reserved.</p>
             <p className="text-white/60">{site.group} · Colombo, Sri Lanka · Germany</p>

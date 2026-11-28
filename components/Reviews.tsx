@@ -82,7 +82,7 @@ export default function Reviews() {
 
   return (
     <section className="overflow-hidden bg-slate-50">
-      <div className="mx-auto max-w-7xl px-4 pb-16 pt-12">
+      <div className="site-container pb-16 pt-12">
         <div className="mx-auto mb-8 max-w-2xl text-center md:mb-14">
           <p className="text-base font-semibold tracking-widest text-red">TESTIMONIALS</p>
           <h2 className="mt-3 text-3xl font-bold text-navy md:text-5xl">What Our Clients Say</h2>

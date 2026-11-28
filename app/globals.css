@@ -113,3 +113,34 @@ body {
 .glow {
   background: radial-gradient(closest-side, currentColor 0%, currentColor 35%, transparent 100%);
 }
+
+/* Page gutters: 16px mobile, 24px tablet, 40px laptop, 48px desktop; content centred up to 1344px incl. gutters */
+@layer components {
+  .site-container {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 84rem;
+    padding-inline: 1rem;
+  }
+  .site-px {
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .site-container,
+    .site-px {
+      padding-inline: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .site-container,
+    .site-px {
+      padding-inline: 2.5rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    .site-container,
+    .site-px {
+      padding-inline: 3rem;
+    }
+  }
+}
